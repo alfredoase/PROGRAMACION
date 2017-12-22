@@ -1,6 +1,4 @@
 package Juego1;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Jugador {
 	private int id;
@@ -11,9 +9,11 @@ public class Jugador {
 	private String nick;
 	private String correo;
 	
+	// GETTER
 	public int getId() {
 		return id;
 	}
+	//SETTER
 	public void setId(int id) {
 		this.id = id;
 	}
