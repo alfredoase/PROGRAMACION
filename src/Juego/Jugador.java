@@ -8,10 +8,14 @@ public class Jugador {
 	private String apellidos;
 	private String nick;
 	private String correo;
+	private String dificultad;
+	private String temporizadorDadosON;
 	
+	// GETTER
 	public int getId() {
 		return id;
 	}
+	//SETTER
 	public void setId(int id) {
 		this.id = id;
 	}
@@ -58,12 +62,21 @@ public class Jugador {
 		this.correo = correo;
 	}
 	
-	public Jugador() {
-		
+	public String getDificultad(){ 
+		return dificultad; 
+	}
+	public void setDificultad(String dificultad){ 
+		this.dificultad = dificultad; 
 	}
 	
-	public String toString() {
-		System.out.println("Informacion personal del jugador: "+this.nick);
-		return "Nombre: "+this.nombre+" Apellidos: "+this.apellidos+" Edad:"+this.edad+" Puntuacion:"+this.puntuacion;
+	public String getActivarTemporizador() {
+		return temporizadorDadosON;
+	}
+	public void setActivarTemporizador(String temporizadorDadosON) {
+		this.temporizadorDadosON = temporizadorDadosON;
+	}
+
+	public Jugador() {
+		
 	}
 }
