@@ -1,5 +1,7 @@
 package Juego;
 
+import javax.swing.Timer;
+
 public class Jugador {
 	private int id;
 	private int edad;
@@ -8,10 +10,22 @@ public class Jugador {
 	private String apellidos;
 	private String nick;
 	private String correo;
+	private String dificultad;
 	
+	//VARIABLE BOOLEAN HAY CAMBIOS EN LOS DATOS
+	private int hayCambios;
+	
+	//VARIABLE TEMPORIZADOR PARTIDA
+	private int temporizador2;
+	
+	//CONTROLAR EL TEMPORIZADOR DE 10 SEGUNDOS
+	private String temporizadorDadosON;
+	
+	// GETTER
 	public int getId() {
 		return id;
 	}
+	//SETTER
 	public void setId(int id) {
 		this.id = id;
 	}
@@ -21,6 +35,13 @@ public class Jugador {
 	}
 	public void setEdad(int edad) {
 		this.edad = edad;
+	}
+	
+	public int getTemp() {
+		return temporizador2;
+	}
+	public void setTemp(int temporizador) {
+		this.temporizador2 = temporizador;
 	}
 	
 	public int getPuntuacion() {
@@ -58,12 +79,29 @@ public class Jugador {
 		this.correo = correo;
 	}
 	
-	public Jugador() {
-		
+	public String getDificultad(){ 
+		return dificultad; 
+	}
+	public void setDificultad(String dificultad){ 
+		this.dificultad = dificultad; 
 	}
 	
-	public String toString() {
-		System.out.println("Informacion personal del jugador: "+this.nick);
-		return "Nombre: "+this.nombre+" Apellidos: "+this.apellidos+" Edad:"+this.edad+" Puntuacion:"+this.puntuacion;
+	public String getActivarTemporizador() {
+		return temporizadorDadosON;
+	}
+	public void setActivarTemporizador(String temporizadorDadosON) {
+		this.temporizadorDadosON = temporizadorDadosON;
+	}
+	
+	public int gethayCambios() {
+		return hayCambios;
+	}
+	public void sethayCambios(int hayCambios) {
+		this.hayCambios = hayCambios;
+	}
+	
+	
+	public Jugador() {
+		
 	}
 }
